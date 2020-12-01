@@ -2,14 +2,14 @@
 // ======
 
 function part1(input) {
-  return 1;
+    return input;
 }
 
 // Part 2
 // ======
 
 function part2(input) {
-  return 1;
+    return input*2;
 }
 
-module.exports = { part1, part2 };
+export { part1, part2 };
