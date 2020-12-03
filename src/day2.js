@@ -19,7 +19,7 @@ function parseInput(input){
             password: sec[2],
             range: sec[0].split('-').map(x=>+x),
             letter: sec[1].slice(0,sec[1].length-1)
-        }
+        };
     });
 }
 
