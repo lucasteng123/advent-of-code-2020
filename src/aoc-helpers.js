@@ -5,4 +5,8 @@ function parseInputIntoArray(i) {
     return i.split('\n');
 }
 
-export {strToNumArray,parseInputIntoArray};
+function between(x,min,max){
+    return x>=min && x<=max;
+}
+
+export {strToNumArray,parseInputIntoArray,between};

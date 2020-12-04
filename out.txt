@@ -1,0 +1,8 @@
+
+> advent-of-code-2020@1.0.0 start
+> node index.js "4"
+
+Part 1: 199
+
+Part 2: 199
+
