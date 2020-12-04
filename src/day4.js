@@ -5,13 +5,13 @@ import {between} from './aoc-helpers.js';
 
 function part1(input) {
     const i = input.split('\n\n');
-    const ids = i.map(id=>new Id(id));
+    const ids = i.map(id=>new Id(id,false));
     const validIds = ids.filter(id=>id.isValid());
     return validIds.length;
 }
 
 class Id {
-    constructor(inputText){
+    constructor(inputText,validate){
         const solve = [...inputText.matchAll(/([a-z]+):(\S+)/g)];
         this.byr=null;
         this.iyr=null;
@@ -21,6 +21,7 @@ class Id {
         this.ecl=null;
         this.pid=null;
         this.cid=null;
+        this.validate=validate;
         solve.forEach(slv => {
             this[slv[1]]=slv[2];
         });
@@ -30,7 +31,7 @@ class Id {
             if(typeof this[el] == 'function') break;
             if(el=='cid') break;
             if(this[el]===null) return false;
-            if(!validity[el](this[el])){
+            if(!validity[el](this[el])&&this.validate){
                 return false;
             } 
         }
@@ -63,7 +64,10 @@ const validity={
 // ======
 
 function part2(input) {
-    return part1(input);
+    const i = input.split('\n\n');
+    const ids = i.map(id=>new Id(id,true));
+    const validIds = ids.filter(id=>id.isValid());
+    return validIds.length;
 }
 
 export { part1, part2};
