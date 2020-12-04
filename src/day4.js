@@ -51,13 +51,11 @@ const validity={
             return between(Number(input[1]),59,76);
         case 'cm':
             return between(Number(input[1]),150,193);
-        default:
-            return false;
         }
     },
-    hcl:(i) => Boolean(i.match(/#[a-f0-9]{6}/)),
-    ecl:(i)=> Boolean(i.match(/amb|blu|brn|gry|grn|hzl|oth/)),
-    pid:(i)=> Boolean(i.match(/\d{9}/))
+    hcl:(i) => Boolean(i.match(/^#[a-f0-9]{6}$/)),
+    ecl:(i)=> Boolean(i.match(/^amb|blu|brn|gry|grn|hzl|oth$/)),
+    pid:(i)=> Boolean(i.match(/^\d{9}$/))
 };
 
 // Part 2
