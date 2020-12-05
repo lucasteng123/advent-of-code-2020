@@ -17,7 +17,9 @@ function parseSeat(seat){
     const bits = seat.split('').map((bit) => /F|L/.test(bit) ? 0 : 1).join('');
     const row = parseInt(bits.slice(0, 7), 2);
     const col = parseInt(bits.slice(7), 2);
-    let seatID = (row*8)+col;
+
+    //seatID is just the integer representation of all the bits
+    let seatID = parseInt(bits,2);
     return {row,col,seatID};
 }
 
