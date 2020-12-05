@@ -31,9 +31,7 @@ function part2(input) {
         seatIDs.push(parseSeat(seat).seatID);
     }
     seatIDs.sort((a,b)=>a-b);
-    console.log(seatIDs);
     for (let idx in seatIDs){
-        console.log(`${seatIDs[idx]}:${seatIDs[Number(idx)+1]}:${seatIDs[idx]-seatIDs[Number(idx)+1]}`);
         if(seatIDs[Number(idx)+1]-seatIDs[Number(idx)] == 2) return seatIDs[idx]+1;
     }
 }
