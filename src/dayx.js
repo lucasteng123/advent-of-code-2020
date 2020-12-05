@@ -10,7 +10,7 @@ function part1(input) {
 // ======
 
 function part2(input) {
-    return null;
+    return input;
 }
 
 export { part1, part2 };
