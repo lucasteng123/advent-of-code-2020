@@ -11,8 +11,8 @@ function part1(input) {
         if(sid>largestSeat) largestSeat = sid;
     }
     return largestSeat;
-    
 }
+
 function parseSeat(seat){ 
     const bits = seat.split('').map((bit) => /F|L/.test(bit) ? 0 : 1).join('');
     const row = parseInt(bits.slice(0, 7), 2);
