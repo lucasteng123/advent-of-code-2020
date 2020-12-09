@@ -37,7 +37,8 @@ function part2(input,preamble) {
                     subarr.sort((a,b)=>a-b);
                     console.log(`found set: ${subarr}`);
                     return subarr[0]+subarr[subarr.length-1];
-                };
+                }
+                //if the sum is already over the errored number, we know it won't be possible
                 if(sum(subarr)>erroredNumber) break;
             }
         }
