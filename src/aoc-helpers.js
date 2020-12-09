@@ -1,7 +1,7 @@
 function strToNumArray(i) {
     return i.map(x=>Number(x));
 }
-function parseInputIntoArray(i,s) {
+function parseInputIntoArray(i,s='\n') {
     return i.split(s);
 }
 

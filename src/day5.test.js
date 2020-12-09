@@ -8,8 +8,5 @@ test('seat', () => {
     expect(day.parseSeat('BBFFBBFRLL').col).toBe(4);
     expect(day.parseSeat('BBFFBBFRLL').seatID).toBe(820);
 });
-test('2', () => {
-    expect(day.part2(testInput)).toBe(null);
-});
 
 
