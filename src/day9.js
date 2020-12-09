@@ -9,9 +9,9 @@ function part1(input,preamble=25) {
     input = parseInputIntoArray(input);
     for(let i = preamble; i<input.length; i++){
         let pr = input.slice(i-preamble,i);
-        let permutations = generatorics.permutation(pr,2);
+        let combinations = generatorics.combination(pr,2);
         let foundSum = false;
-        for(let p of permutations){
+        for(let p of combinations){
             if(Number(p[0])+Number(p[1]) == input[i]) foundSum = true;
         }
         if(!foundSum) return Number(input[i]);
