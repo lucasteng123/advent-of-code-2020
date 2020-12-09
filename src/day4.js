@@ -68,4 +68,4 @@ function part2(input) {
     return validIds.length;
 }
 
-export { part1, part2};
+export {part1, part2, Id};

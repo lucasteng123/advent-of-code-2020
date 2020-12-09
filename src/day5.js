@@ -38,4 +38,5 @@ function part2(input) {
     }
 }
 
+
 export { part1, part2, parseSeat };
