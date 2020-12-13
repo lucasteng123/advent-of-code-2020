@@ -1,13 +1,16 @@
 // Part 1
 // ======
 
-import { parseInputIntoArray } from "./aoc-helpers.js";
+import { parseInputIntoArray } from './aoc-helpers.js';
 
 function part1(input) {
     input = parseInputIntoArray(input,'\n');
     let departGoal = Number(input[0]);
 
-    let busIDs = input[1].split(',').map(x=>+x);
+    let busIDs = input[1].split(',');
+    busIDs = busIDs.filter(x=>x!='x').map(x=>+x);
+
+    console.log(busIDs);
 
     let nextDepartureDelta = 1000;
     let fastestBusID = null;
@@ -20,8 +23,6 @@ function part1(input) {
         }
     }
 
-
-
     return nextDepartureDelta*fastestBusID;
     
 }
@@ -30,7 +31,7 @@ function part1(input) {
 // ======
 
 function part2(input) {
-    return input;
+    return null;
 }
 
 export { part1, part2 };
