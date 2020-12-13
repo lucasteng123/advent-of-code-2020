@@ -10,8 +10,6 @@ function part1(input) {
     let busIDs = input[1].split(',');
     busIDs = busIDs.filter(x=>x!='x').map(x=>+x);
 
-    console.log(busIDs);
-
     let nextDepartureDelta = 1000;
     let fastestBusID = null;
 
@@ -31,7 +29,24 @@ function part1(input) {
 // ======
 
 function part2(input) {
-    return null;
+    input = parseInputIntoArray(input);
+    input = input[1].split(',');
+    let timestamp = 0;
+    let i = 0;
+    let acc = 1;
+    while (i < input.length) {
+        let _inp = input[i];
+        if (_inp == 'x') i++;
+        else {
+            if ((timestamp + i) % _inp == 0) {
+                acc *= _inp;
+                i++;
+            } else {
+                timestamp += acc;
+            }
+        }
+    }
+    return timestamp;
 }
 
 export { part1, part2 };

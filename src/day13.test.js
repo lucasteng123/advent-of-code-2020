@@ -7,7 +7,7 @@ test('Part 1', () => {
     expect(day.part1(testInput,5)).toBe(295);
 });
 test('2', () => {
-    expect(day.part2(testInput,5)).toBe(null);
+    expect(day.part2(testInput,5)).toBe(1068781);
 });
 
 
