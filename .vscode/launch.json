@@ -8,6 +8,10 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
+            "args": [
+                "11",
+                "test"
+            ],
             "skipFiles": [
                 "<node_internals>/**"
             ],
