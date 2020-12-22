@@ -42,7 +42,7 @@ function playGameRecursively(hand1=[], hand2=[], depth=0){
     let played = {};
     while(hand1.length && hand2.length){
 
-        let combinedHands = hand1.join('')+hand2.join('');
+        let combinedHands = `(${hand1.join(',')}),(${hand2.join(',')})`;
 
         if(played[combinedHands]){
             if(depth == 0){
